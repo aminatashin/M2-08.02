@@ -43,21 +43,51 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
 
             create CSS rules to style them if needed
             ...to make sure every Album component looks the same.
+            
         
         */
+        body{
+          background-color: rgb(41, 37, 12);
+          color: white;
+        }
+        .album-container{
+          text-align: center;
+          padding: 10px;
+          
+        }
+        .album-container img{
+          width: 250px;
+          height: 250px;
+        }
+        .album-title{
+          margin-top: 0.5em;
+          margin-bottom: 0px;
+
+
+        }
+        span{
+          color: white;
+        }
+        .album-genre{
+
+        }
     </style>
 </head>
 
-<body style="background-color: rgb(41, 37, 12);">
+<body >
+  <nav style="margin: auto; background-color: rgb(42, 16, 63);" >
     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
-          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#Home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
         </li>
         <li class="nav-item" role="presentation">
-          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#favourite Album" role="tab" aria-controls="pills-profile" aria-selected="false">favourite Album</a>
         </li>
         <li class="nav-item" role="presentation">
-          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#Best Album" role="tab" aria-controls="pills-contact" aria-selected="false">Best Album</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#Wall od Shame" role="tab" aria-controls="pills-contact" aria-selected="false">Wall od Shame</a>
         </li>
       </ul>
       <div class="tab-content" id="pills-tabContent">
@@ -65,85 +95,77 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
         <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
       </div>
+    </nav>
     
     
-    <div class="container-lg"  >
-        <h1 style="text-align: center; background-color: gold;color: white;"  >Wellcome</h1>
-        <h2 style="text-align: center; background-color: rgb(22, 5, 32);color: white;">favourite Albums</h2>
-        <div class="row">
-            <div class="col-6">
-                <div class="card" >
-                    <img src="daft.png" class="card-img-top" alt="music photo">
-                    <div class="card-body">
-                      <h5 class="card-title">My album</h5>
-                      <p class="card-text">The album title:Around The World <br>The album dj: Daft Punk </p>
-                      <a href="#" class="btn btn-primary">Go to Spotify</a>
-                    </div>
-                  </div>
+
+        <section id="favourite Album">
+          <div class="container">
+            <div class="row" >
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="album-container">
+                <img src="elec2.png" alt="photo" class="img-fluid">
+                <h2 class="album-title">Nicolas Jaar </h2>
+                <span>Electronic</span>
+              </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="album-container">
+                <img src="electric1.png" alt="photo" class="img-fluid">
+                <h2 class="album-title">Pink </h2>
+                <span>Electronic</span>
+              </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="album-container">
+                <img src="elec4.png" alt="photo" class="img-fluid">
+                <h2 class="album-title">Muse </h2>
+                <span>Electronic</span>
+              </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="album-container">
+                <img src="elec3.png" alt="photo" class="img-fluid">
+                <h2 class="album-title">Amoof </h2>
+                <span>Electronic</span>
+              </div>
+
+
+              </div>
 
             </div>
 
+          </div>
+          
 
-            <div class="col-6"> 
-                <div class="card" >
-                    <img src="michael.png" class="card-img-top" alt="music photo">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">The album title:Thriller <br>The album singer: Michel jackson</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-            </div>
-        </div>
-
-
-        <div class="container">
-            <h1 style="text-align: center; background-color: gold;color: white;">House Musics!</h1>
+        </section>
+        <hr>
+        <section class="Best Album">
+          <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-md-4 col-lg-4"> 
-                    <div class="card" >
-                        <img src="electric1.png" class="card-img-top" alt="photo">
-                        <div class="card-body">
-                          <h5 class="card-title">Electronic</h5>
-                          <p class="card-text">The album title:I say <br>The album dj: Nicolas Jaar</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
-
-
-                </div>
-
-
-                <div class="col-sm6 col-md-4 col-lg-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="elec2.png" class="card-img-top" alt="photo">
-                        <div class="card-body">
-                          <h5 class="card-title">Electronic</h5>
-                          <p class="card-text">The album title:heaven <br>The album dj: Amoof</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
-
-
-                </div>
-
-
-                <div class="col-sm-6 col-md-4 col-lg-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="elec4.png" class="card-img-top" alt="photo">
-                        <div class="card-body">
-                          <h5 class="card-title">Electronic</h5>
-                          <p class="card-text">The album title:Sailing <br>The album dj: David</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
-
-
-                </div>
+              <div class="col-6 col-md_4">
+                <img src="daft.png"  class="img-fluid" alt="photo">
+                <h2 class="album-title">Daft Punk</h2>
+              </div>
+         
+            <div class="col-6 col-md_8">
+            <div class="d-felx flex-column justify-content-center">
+              <h6>Daft Punk " Around the World " is a song by the French electronic music duo Daft Punk. It appeared on the duo's debut album, Homework in 1997 and was released as a single the same year. It became a major club hit around the world and arrived at #1 in dance charts.</h6>
 
             </div>
-            
-        </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+        
+                 
     <!-- EXERCISE 2 
             Implement a navigation bar using the bootstrap component
             This navigation bar must link every section in your page.
