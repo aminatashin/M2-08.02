@@ -1,22 +1,4 @@
-<!-- M2-D2 ASSIGNMENT TOPIC
-You are creating a website to showcase your favourite music albums.
-In this page you will have a short biography section about yourself, the top albums of your life, 
-the worst album you ever listened to and everything related to the music you love.
 
-ASSIGNMENT RULES
-- The project must be pushed to a new repository and linked in EduFlow by the end of the day.
-- You can google / use StackOverflow BUT we suggest you to use just the material provided and documentation.
-- To test the page, open it with your browser and inspect it with developer tools / device emulator.
-- Use Bootstrap4.6 classes to create the page.
-- Use containers, rows and cols in order to achieve a great responsive layout.
-
-NOTE:
-Even the most experienced designers need inspiration.
-Spend some time surfing the web researching the best way of representing the albums you love.
-Could be the Amazon way, the Spotify or Apple music way or any other music collection out there.
-
-HINT: Manage your time in order to finish the structure and responsiveness before focusing on the details.
--->
 
 <html lang="en">
 
@@ -24,31 +6,17 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
+    
 
     <style>
-        /* EXERCISE 1
-            For every Album displayed in the page we'd like to have a consistent appearence.
-            Create the template of an Album component (you can start from a bootstrap one or create your own)
-            You will use it to display every album in the page.
-            
-            You should have consistency in these elements:
-            - The album card
-            - The album cover
-            - The album title
-            - The album group / singer / dj
-            - The album genre
-            - The album duration
-            - etc
-
-            create CSS rules to style them if needed
-            ...to make sure every Album component looks the same.
-            
+      
         
-        */
+        
         body{
           background-color: rgb(41, 37, 12);
           color: white;
+          min-height: 100vh;
+         
         }
         .album-container{
           text-align: center;
@@ -68,9 +36,40 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
         span{
           color: white;
         }
-        .album-genre{
+        .jumbotron{
+          background-color: rgb(121, 77, 45);
+          color: wheat;
+          animation: fade-in 1s 0.5s backwards ease-in-out;
+        }
+
+        @keyframes fade-in {
+          from {
+               opacity: 0;
+           }
+              to {
+                 opacity: 1;
+               }
 
         }
+        .coverimage{
+        
+          width: 1000;
+        }
+
+        .card-favorite .card-body {
+          background-color: rgb(59, 39, 25);
+        }
+        .badge {
+          position: absolute;
+          top: 0;
+          
+          left: 0;
+        }
+        
+
+
+
+        
     </style>
 </head>
 
@@ -121,7 +120,7 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
               <div class="col-6 col-md-4 col-lg-3">
                 <div class="album-container">
                 <img src="elec4.png" alt="photo" class="img-fluid">
-                <h2 class="album-title">Muse </h2>
+                <h2 class="album-title"> Muse </h2>
                 <span>Electronic</span>
               </div>
               </div>
@@ -139,6 +138,23 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
             </div>
 
           </div>
+
+             <!-- EXERCISE 1
+        Create a Jumbotron section with a quick explanation / image of the website.
+        Make it appear with a fade-in animation effect when the page loads.
+    -->
+          <div class="container">
+          <section class="jumbotron">
+            <div class="jumbotron jumbotron-fluid">
+              <div class="container ">
+                <img class="coverimage img-fluid" src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGluc3RydW1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60 " alt="">
+                <h1 style="color: coral;" class="display-4 text-center mt-2 mb-3">Wellcome to <strong>Your</strong>  page!</h1>
+                <p class="lead text-center">This is a page for music lovers <strong>Enjoy!</strong></p>
+              </div>
+            </div>
+            
+          </section>
+        </div>
           
 
         </section>
@@ -159,76 +175,75 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
 
               </div>
 
+              <!-- EXERCISE 2
+        Use a Bootstrap Card to contain every album in the favorite list you previously created.
+        Use the elements of a card bootstrap provides you with to display nicely the album informations such as: album title, artist, year, etc..
+    -->
+
             </div>
+            <section class="card-favorite">
+              <div class="container mt-5">
+                <div class="row row-cols-1 row-cols-md-4">
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card h-100 position_relative">
+                      
+                      <img src="./michael.png" class="card-img-top" alt="#">
+                      <span class="badge badge-primary">Electronic</span>
+
+                      <div class="card-body">
+                        <h5 class="card-title">Electronic</h5>
+                        <p class=" card-text"> <strong>Nicolas Jaar</strong> <br>2019/Hit </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card h-100 position-relative">
+                      <img src="./elec2.png" class="card-img-top" alt="#">
+                      <span class="badge badge-primary">Pop</span>
+                      <div class="card-body">
+                        <h5 class="card-title">Pop</h5>
+                        <p class="card-text"> <strong>Pink</strong> <br>2009/Hit</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card h-100 position-relative">
+                      <img src="./elec3.png" class="card-img-top" alt="#">
+                      <span class="badge badge-primary">Rock</span>
+                      <div class="card-body">
+                        <h5 class="card-title">Rock</h5>
+                        <p class="card-text"> <strong>Muse</strong> <br>2010/Hit</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card h-100 position-relative">
+                      <img src="./electric1.png" class="card-img-top" alt="#">
+                      <span class="badge badge-primary">Electronic</span>
+                      <div class="card-body">
+                        <h5 class="card-title">Electronic</h5>
+                        <p class="card-text"><strong>Daft Punk</strong> <br>2003/Hit</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+
+
+
+
+
+
 
           </div>
 
         </section>
+        <footer class="h-100"></footer>
         
                  
-    <!-- EXERCISE 2 
-            Implement a navigation bar using the bootstrap component
-            This navigation bar must link every section in your page.
-        -->
-
-    <!-- EXERCISE 3
-            Create a responsive section for your favourite albums.
-            In this section you should have:
-            - 4 albums per row when the screen is very large
-            - 3 albums per row when you are on a tablet (or a smaller viewport)
-            - 2 albums per row when you are on a small screen
-        -->
-
-    <!-- EXERCISE 4
-            Create a section for the album reviews.
-            Pick one of your favourite albums, and create a section with:
-            - Cover Image
-            - Title
-            - Band
-            - Duration
-            - Genre
-            - Tracklist
-            - ... And whatever you think it's interesting about it!
-        -->
-
-    <!-- EXERCISE 5
-            Worst album list! Choose the albums you dislike or some you think are overrated and list it
-            in this "hall of shame" chart! 
-        -->
-
-    <!-- EXERCISE 6
-            Do you have any musician / band you admire or you are a fan of?
-            This section is dedicated to him / her / them!
-            Feel free to experiment in this part of the page.
-        -->
-
-    <!-- EXERCISE 7
-            Just covers!
-            Create a tapestry of album pictures. Every album picture must be "squared" (use CSS to achieve that).
-            Put at least 20 covers (also repeated) to have a nice tapestry effect and see how Bootstrap handles it.
-        -->
-
-    <!-- EXERCISE 8
-            Implement a footer with some information / social links.
-        -->
-
-    <!-- ############ EXTRA:
-        EXERCISE 9
-            Create an album details area which will be toggled on and off by clicking on the album image.
-        -->
-
-    <!-- EXERCISE 10
-            Add a button to each section. By clicking on it the section body appears (if hidden) or disappears (if visible).
-            (hint: look for a boostrap component that can handle the job for you. You can always rely on DOM manipulation if you can't find it)
-        -->
-
-    <!--
-         EXERCISE 11
-            Add in the footer the number of how many ALBUMS are present on the page. 
-            Create the JavaScript logic that runs when the page finished loading and 
-            counts the albums and applies the number in the area of the footer you've previously decided.
-            
-        -->
+    
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
